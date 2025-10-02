@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy n Sell PH — Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+<!-- Decorative SVG Background -->
+<div class="bg-svg-deco"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">Buy n Sell PH</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse d-none d-lg-block">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+<li class="nav-item"><button id="logoutBtnHome" class="btn btn-outline-danger btn-sm ms-2 d-none">Logout</button></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Account</h5>
+<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+<button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+<hr>
+
+</div>
+</div>
+
+
+<!-- Hero -->
+<header class="hero hero-buynsell">
+<div class="hero-overlay"></div>
+<div class="container hero-content text-center text-white">
+<h1 class="display-5 fw-bold">Buy n Sell PH</h1>
+<p class="lead">Find great deals across the Philippines — buy, sell, trade.</p>
+<div class="d-flex justify-content-center gap-2">
+<button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+<button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+</div>
+</div>
+</header>
+
+
+<!-- Featured Products -->
+<section class="container py-5">
+<h3 class="mb-4">Featured Listings</h3>
+<div class="row g-4">
+<!-- card 1 -->
+<div class="col-md-4">
+<div class="card card-deco h-100 shadow-sm">
+<img src=".vscode/smartphone.jpg" class="card-img-top" alt="Phone">
+<div class="card-body">
+<h5 class="card-title">Smartphone — Like New</h5>
+<p class="card-text">One-owner smartphone, 128GB, camera in perfect condition. Metro Manila pickup.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="price">₱8,500</span>
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Message Seller</button>
+</div>
+</div>
+</div>
+</div>
+<!-- card 2 -->
+<div class="col-md-4">
+<div class="card card-deco h-100 shadow-sm">
+<img src=".vscode/laptop1.jpg" class="card-img-top" alt="Laptop">
+<div class="card-body">
+<h5 class="card-title">Gaming Laptop</h5>
+<p class="card-text">High-performance laptop for gaming and work. Includes RGB keyboard and gaming mouse.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="price">₱45,000</span>
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Message Seller</button>
+</div>
+</div>
+</div>
+</div>
+<!-- card 3 -->
+<div class="col-md-4">
+<div class="card card-deco h-100 shadow-sm">
+<img src=".vscode/laptop2.jpg" class="card-img-top" alt="Laptop">
+<div class="card-body">
+<h5 class="card-title">Gaming Laptop</h5>
+<p class="card-text">High-performance laptop for gaming and work. Includes RGB keyboard and gaming mouse.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="price">₱45,000</span>
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Message Seller</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginFormPage" novalidate>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="loginEmail" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="loginPassword" class="form-control" required>
+          </div>
+          <button class="btn btn-primary w-100" type="submit">Login</button>
+        </form>
+        <p class="mt-3 small">No account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registerFormPage" novalidate>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="regName" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone (optional)</label>
+            <input type="text" name="regPhone" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="regEmail" class="form-control" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="regPassword" name="regPassword" class="form-control" required minlength="8">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" name="regConfirmPassword" class="form-control" required>
+            </div>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="termsCheck" name="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">I agree to the terms & conditions</label>
+          </div>
+          <button class="btn btn-success w-100" type="submit">Create Account</button>
+        </form>
+        <p class="mt-3 small">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+$(function() {
+
+  if(localStorage.getItem('bnsp_authenticated')) {
+    $('#logoutBtnHome').removeClass('d-none');
+  }
+  $('#logoutBtnHome').on('click', function() {
+    localStorage.removeItem('bnsp_authenticated');
+    window.location.href = 'index.html';
+  });
+});
+</script>
+</body>
+</html>

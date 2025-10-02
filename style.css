@@ -1,0 +1,134 @@
+.bg-svg-deco {
+	position: fixed;
+	z-index: 0;
+	top: 0; left: 0; width: 100vw; height: 100vh;
+	pointer-events: none;
+	background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%230d6efd" fill-opacity="0.07" d="M0 0L1600 0L1600 900L0 900Z"/><ellipse fill="%230d6efd" fill-opacity="0.12" cx="1400" cy="100" rx="300" ry="120"/><ellipse fill="%230d6efd" fill-opacity="0.09" cx="200" cy="800" rx="350" ry="140"/><ellipse fill="%230d6efd" fill-opacity="0.06" cx="800" cy="450" rx="600" ry="300"/></svg>');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+body { position: relative; z-index: 1; }
+
+:root {
+	--accent: #0d6efd;
+	--accent-dark: #084298;
+	--muted: #6c757d;
+	--bg: #f6f7fb;
+	--card-bg: #fff;
+	--shadow: 0 4px 24px rgba(0,0,0,0.07);
+	--radius: 16px;
+}
+body {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: var(--bg);
+	color: #222;
+}
+.navbar-brand {
+	letter-spacing: 0.4px;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--accent) !important;
+}
+.navbar {
+	box-shadow: var(--shadow);
+}
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+	color: var(--accent) !important;
+}
+
+.hero-buynsell {
+	height: 60vh;
+	background-image: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: var(--radius);
+	margin-top: 1.5rem;
+	box-shadow: var(--shadow);
+}
+.hero-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, rgba(13,110,253,0.45), rgba(13,110,253,0.15));
+	border-radius: var(--radius);
+}
+.hero-content {
+	position: relative;
+	z-index: 2;
+	padding: 3rem 1rem;
+}
+.hero-content h1 {
+	font-size: 2.8rem;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+.hero-content p {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.card-deco {
+	border-radius: var(--radius);
+	overflow: hidden;
+	background: var(--card-bg);
+	box-shadow: var(--shadow);
+	transition: transform 0.18s, box-shadow 0.18s;
+}
+.card-deco:hover {
+	transform: translateY(-6px) scale(1.03);
+	box-shadow: 0 8px 32px rgba(13,110,253,0.12);
+}
+.card-deco .card-img-top {
+	height: 220px;
+	object-fit: cover;
+	border-bottom: 1px solid #eee;
+}
+.card-title {
+	font-weight: 700;
+	color: var(--accent-dark);
+}
+.price {
+	font-weight: 700;
+	color: var(--accent);
+	font-size: 1.1rem;
+}
+.btn-primary, .btn-success, .btn-outline-primary {
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	box-shadow: 0 2px 8px rgba(13,110,253,0.07);
+	transition: background 0.15s, color 0.15s;
+}
+.btn-primary:hover, .btn-success:hover, .btn-outline-primary:hover {
+	filter: brightness(0.95);
+}
+
+.modal-content {
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+footer {
+	color: var(--muted);
+	background: #fff;
+	border-top: 1px solid #eee;
+	box-shadow: 0 -2px 12px rgba(0,0,0,0.03);
+}
+
+label.error {
+	color: #d9534f;
+	font-size: 0.95rem;
+	margin-top: 0.25rem;
+	font-weight: 500;
+}
+
+.offcanvas, .offcanvas-body {
+	border-radius: var(--radius) 0 0 var(--radius);
+}
+.form-control:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.12);
+}
